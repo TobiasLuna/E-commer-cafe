@@ -1,0 +1,162 @@
+/*PRODUCTOS DE TIENDA*/
+.contenido
+{
+    background-color: #FDF2E9;
+    display: grid;
+    grid-template-areas:
+                          'cafes'
+                          'maquinas'
+                          'otros'
+                          'footer';
+    
+}
+/*FIN DE PRODUCTOS DE TIENDA*/
+
+/*NAVBAR DE TIENDA*/
+.sidebar
+{
+    display:flex;
+    min-height: 100vh;
+    background-color: #fff;
+    width: 400px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+
+}
+
+.sidebar .menu span{
+    font-size: 20px;
+    position:fixed;
+}
+.item-sidebar
+{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 15px;
+    margin-right:40px;
+    margin-bottom: 40px;
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+
+}
+.item-sidebar p
+{
+    margin-left: 30px;
+    position:fixed;
+    display: block;
+}
+.sidebar .menu a span
+{
+   font-size: 25px;
+}
+html 
+{
+    scroll-behavior: smooth;
+}
+section[id]
+{
+    scroll-margin-top: 70px;
+}
+.selected
+{
+    color:#F9E79F;
+}
+@media screen and (max-width:1000px) {
+    .sidebar 
+    {
+        width: 60px;
+    }
+    .sidebar .menu a p
+    {
+        position:left;
+        display: none;
+    }
+    .sidebar .menu a span
+    {
+        font-size: 30px;
+    }
+}
+
+/*FIN DE NAVBAR*/
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor
+{   
+    margin: 20px;
+    display: flex;
+
+    width: auto;
+    height:250px;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.tarjeta
+{
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:100px;
+}
+
+.tarjeta .texto h4
+{
+    text-align: center;
+    text-transform: uppercase;
+    color:#273746;
+}
+.tarjeta .texto
+{
+    margin:10px;
+    text-align: center;
+    color:rgb(41, 41, 41);
+}
+
+.tarjeta .texto p
+{
+    width: 200px;
+    text-align: left;
+}
+
+.tarjeta .img img
+{
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+}
+.tarjeta .img p
+{
+    font-size: 20px;
+}
+.tarjeta .img .btn-comprar
+{
+    text-decoration: none;
+    border:1px solid #273746;
+    color:#273746;
+    text-transform: uppercase;
+    margin:10px;
+    padding: 5px;
+}
+.tarjeta .img .btn-comprar:hover
+{
+    background: #273746;
+    color:#fff;
+}
+
+.favorito
+{
+    background:none;
+    border:none;
+    text-decoration: none;
+    color:#3b3b3b;
+
+}
+.favorito:hover
+{
+    color:#F9E79F;
+   
+}

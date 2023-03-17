@@ -1,0 +1,73 @@
+<div class="contenido">
+       <div class="titulo">
+            <h3>CARRITO</h3>
+    </div>
+            <div class="total">
+            <div class="from-group">
+                 <label>cantidad:</label>
+                 <input type="text"  value="{{cantidad}}" disabled>
+            </div>
+            <div class="from-group">
+                 <label>total:</label>
+                 <input type="text"  value="{{precio}}" disabled>
+            </div>
+            <div class="from-group">
+                <a href="/comprar/:id" class="btn-comprar" id="btn-compra">
+                    Comprar
+                </a>
+            </div>
+        </div>
+
+    <header class="container">
+{{#each articulo as |articulo|}}
+        
+        <div class="tarjeta">
+            <div class="texto">
+                <h3>{{articulo.nombre_producto}}</h3>
+                <p><b>Descripcion</b> {{articulo.descripcion_producto}}</p>
+                <p><b>Precio</b> {{articulo.precio_producto}}</p>
+            </div>
+            <div class="image">
+                <img src="/img/producto/{{articulo.image_producto}}">
+                <a href="/tienda/comprar/{{articulo.id_producto}}" class="btn-comprar">Comprar</a>
+            </div>
+
+            <form class="btn-borrar-usuario" action="/User/EliminarCarrito/{{articulo._id}}/{{articulo.precio_producto}}/{{articulo.cantidad_producto}}?_method=DELETE"
+                method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="btn"><span class="material-symbols-outlined borrar">delete</span></button>
+            </form>
+        </div>
+        {{else}}
+        <div class="vacio">
+            <span class="material-symbols-outlined">
+                emoji_people
+            </span>
+            <p>El carrito esta vacio</p>
+        </div>
+        {{/each}}
+    </header>
+    
+    <footer>
+        <div class="columnas-footer">
+            <div class="informacion">
+                <h2>INFORMACION</h2>
+                Lorem ipsum dolor sit amet
+                consectetur, adipisicing elit.
+                Repellat natus ex eveniet,
+                provident illo expedita quo
+                dignissimos tenetur veritatis,
+                quaerat ullam praesentium
+                impedit similique totam
+                harum nam possimus, incidunt
+                unde!
+            </div>
+            <div class="redes">
+                <h2>CONTACTO</h2>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</div>

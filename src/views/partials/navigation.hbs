@@ -1,0 +1,56 @@
+<!--NAVBAR-->
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Logo</a>
+        <button class="navbar-toggler bg-body-tertiary" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">INICIO</a>
+                <a class="nav-link" href="/tienda">TIENDA</a>
+                <a class="nav-link" href="/contacto">CONTACTO</a>
+               {{#if user}}
+                <div class="usuario-config">
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="bi bi-person-lines-fill"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/usuario/configuracion/{{user._id}}">Configuraciones</a></li>
+                    <li><a class="dropdown-item" href="/User/Carrito/{{user._id}}">Carrito</a></li>
+                    <li><a class="dropdown-item" href="/usuario/logout">Cerrar sesion</a></li>
+                </ul>
+                </li>
+                </div>
+                {{else}}
+                    <a class="nav-link sesion" href="/usuario/login">Iniciar sesion</a>
+               {{/if}}
+            </div>
+        </div>
+        <div class="usuario">
+            {{#if user}}
+            <a href="/usuario/carrito"><i class="bi bi-cart"></i></a>
+            <div class="usuario-config">
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="bi bi-person-lines-fill"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Configuraciones</a></li>
+                    <li><a class="dropdown-item" href="#">Carrito</a></li>
+                    <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                </ul>
+            </li>
+            </div>
+            {{else}}
+                <a href="/usuario/login"><i class="bi bi-person-circle"></i></a>
+            {{/if}}
+        </div>
+    </div>
+</nav>
+<!--Fin de NAVBAR-->

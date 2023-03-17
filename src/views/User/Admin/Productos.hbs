@@ -1,0 +1,48 @@
+<div class="container">
+    <h3>Datos del producto</h3>
+    <form action="/admin/productos/guardar" method="POST" enctype="multipart/form-data">
+        <div class="grid">
+            <div class="datos">
+                <div class="items">
+                    <label for="nombre_producto">Nombre</label>
+                    <input type="text" name="nombre" id="nombre_producto" value="{{nombre}}" required>
+                </div>
+                <div class="items">
+                    <label for="tipo_producto">Tipo</label>
+                    <select name="tipo" class="form-select" aria-label="Default select example">
+                        <option> Seleccione una opcion </option>
+                        <option  value="cafes">Cafes</option>
+                        <option  value="maquinas">Maquinas</option>
+                        <option  value="otros">Otros</option>
+                    </select>
+                </div>
+                <div class="items">
+                    <label for="precio_producto">Precio</label>
+                    <input type="number" name="precio" id="precio_producto" value="{{precio}}" required>
+                </div>
+                <div class="items">
+                    <label for="descripcion_producto">Descripcion</label>
+                    <textarea name="descripcion" id="descripcion_producto" cols="30" rows="5" value="{{descripcion}}"></textarea>
+                </div>
+            </div>
+            <div class="img-contenedor">
+                <div class="items img-producto">
+                    <label for="nombre_producto">Imagen</label>
+                     <input class="form-control" name="image" type="file" id="formFile" required>
+                </div>
+                <div class="items">
+                    <label for="cantidad_producto">Cantidad</label>
+                    <input type="number" name="cantidad" id="cantidad_producto" value="{{cantidad}}" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="items btn-guardar">
+            <button type="submit">Guardar</button>
+        </div>
+           <div class="items btn-guardar">
+            <a href="/admin/tienda/{{admin._id}}"><button type="button">Ir a la tienda</button></a>
+        </div>
+    </form>
+    
+</div>

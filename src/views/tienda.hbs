@@ -1,0 +1,233 @@
+<div class="contenido">
+    <!--Nav bar lateral y contenido-->
+    <div class="d-flex">
+        <div class="sidebar bg-primario">
+            <div class="menu">
+                <a href="#cafe" class="item-sidebar">
+                    <span class="material-symbols-outlined ">
+                        coffee
+                    </span>
+                    <p>Cafes</p>
+                </a>
+                <a href="#maquinas" class="item-sidebar">
+                    <span class="material-symbols-outlined">
+                        coffee_maker
+                    </span>
+                    <p>Productos</p>
+                </a>
+                <a href="#otros" class="item-sidebar">
+                    <span class="material-symbols-outlined">
+                        grade
+                    </span>
+                    <p>Otros</p>
+                </a>
+            </div>
+        </div>
+    {{#if admin}}
+        <header>
+            {{#each producto as |producto|}}
+            {{#with (adm_tipo tipo 'cafes')}}
+            <section class="contenedor" id="cafe">
+                <div class="tarjeta">
+                    <div class="texto">
+                        <h4>{{producto.nombre}}</h4>
+                        <p>
+                            <b>Descripcion:</b> {{producto.descripcion}}
+                        </p>
+                        <div class="tipo">
+                            <span></span>
+                            <p>Tipo</p>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="/img/producto/{{producto.image}}" alt="no se pudo mostrar">
+                        <p><b>${{producto.precio}}</b></p>
+                        <a href="/tienda/comprar/{{producto._id}}" class="btn-comprar">comprar</a>
+
+                      
+                        <form class="btn-borrar-usuario" action="/admin/productos/eliminar/{{producto._id}}?_method=DELETE"
+                            method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn"><span
+                                    class="material-symbols-outlined borrar">delete</span></button>
+                        </form>
+
+                     <a href="/admin/producto/editar/{{producto._id}}"><span class="material-symbols-outlined edit">edit</span></a>
+                    </div>
+                </div>
+            </section>
+            {{/with}}
+            {{/each}}
+            {{#each producto as |producto|}}
+            {{#with (adm_tipo tipo 'maquinas')}}
+            <section class="contenedor" id="maquinas">
+                <div class="tarjeta">
+                    <div class="texto">
+                        <h4>{{producto.nombre}}</h4>
+                        <p>
+                            {{producto.descripcion}}
+                        </p>
+                    </div>
+                    <div class="img">
+                        <img src="/img/producto/{{producto.image}}" alt="">
+                        <p>${{producto.precio}}</p>
+                        <a href="/tienda/comprar/{{producto._id}}" class="btn-comprar">comprar</a>
+
+                        <form class="btn-borrar-usuario" action="/admin/productos/eliminar/{{producto._id}}?_method=DELETE"
+                            method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn"><span
+                                    class="material-symbols-outlined borrar">delete</span></button>
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+            {{/with}}
+            {{/each}}
+            {{#each producto as |producto|}}
+            {{#with (adm_tipo tipo "otros")}}
+            <section class="contenedor" id="otros">
+                <div class="tarjeta">
+                    <div class="texto">
+                        <h4>{{producto.nombre}}</h4>
+                        <p>
+                            {{producto.descripcion}}
+                        </p>
+                    </div>
+                    <div class="img">
+                        <img src="/img/producto/{{producto.image}}" alt="">
+                        <p>${{producto.precio}}</p>
+                        <a href="/tienda/comprar/{{producto._id}}" class="btn-comprar">comprar</a>
+
+                        <form class="btn-borrar-usuario" action="/admin/productos/eliminar/{{producto._id}}?_method=DELETE"
+                            method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn"><span
+                                    class="material-symbols-outlined borrar">delete</span></button>
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+
+            {{/with}}
+            {{/each}}
+        </header>
+    {{/if}}
+
+    <header>
+            {{#each producto as |producto|}}
+            {{#with (adm_tipo tipo 'cafes')}}
+            <section class="contenedor" id="cafe">
+                <div class="tarjeta">
+                    <div class="texto">
+                        <h4>{{producto.nombre}}</h4>
+                        <p>
+                            <b>Descripcion:</b> {{producto.descripcion}}
+                        </p>
+                        <div class="tipo">
+                            <span></span>
+                            <p>Tipo</p>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="/img/producto/{{producto.image}}" alt="no se pudo mostrar">
+                        <p><b>${{producto.precio}}</b></p>
+                        <a href="/tienda/comprar/{{producto._id}}" class="btn-comprar">comprar</a>
+                    
+                <form method="post" action="/User/Carrito_guardar/{{producto._id}}">
+                     <button type="submit" class="favorito">
+                        <span class="material-symbols-outlined">
+                        star
+                        </span>
+                    </button>
+                    </form>
+                    </div>
+                </div>
+            </section>
+            {{/with}}
+            {{/each}}
+            {{#each producto as |producto|}}
+            {{#with (adm_tipo tipo 'maquinas')}}
+            <section class="contenedor" id="maquinas">
+                <div class="tarjeta">
+                    <div class="texto">
+                        <h4>{{producto.nombre}}</h4>
+                        <p>
+                            {{producto.descripcion}}
+                        </p>
+                    </div>
+                    <div class="img">
+                        <img src="/img/producto/{{producto.image}}" alt="">
+                        <p>${{producto.precio}}</p>
+                        <a href="/tienda/comprar/{{producto._id}}" class="btn-comprar">comprar</a>
+
+                 <form action="/User/Carrito_guardar/{{producto._id}}">
+                     <button type="submit" class="favorito">
+                        <span class="material-symbols-outlined">
+                        star
+                        </span>
+                    </button>
+                    </form>
+
+                    </div>
+                </div>
+            </section>
+            {{/with}}
+            {{/each}}
+            {{#each producto as |producto|}}
+            {{#with (adm_tipo tipo "otros")}}
+            <section class="contenedor" id="otros">
+                <div class="tarjeta">
+                    <div class="texto">
+                        <h4>{{producto.nombre}}</h4>
+                        <p>
+                            {{producto.descripcion}}
+                        </p>
+                    </div>
+                    <div class="img">
+                        <img src="/img/producto/{{producto.image}}" alt="">
+                        <p>${{producto.precio}}</p>
+                        <a href="/tienda/comprar/{{producto._id}}" class="btn-comprar">comprar</a>
+                    </div>
+                    
+                    <form action="/User/Carrito_guardar/{{producto._id}}">
+                     <button type="submit" class="favorito">
+                        <span class="material-symbols-outlined ">
+                        star
+                        </span>
+                    </button>
+                    </form>
+                   
+                </div>
+            </section>
+
+            {{/with}}
+            {{/each}}
+        </header>
+    </div>
+    <!--Fin de nav bar lateral y contenido-->
+    <footer>
+        <div class="columnas-footer">
+            <div class="informacion">
+                <h2>INFORMACION</h2>
+                Lorem ipsum dolor sit amet
+                consectetur, adipisicing elit.
+                Repellat natus ex eveniet,
+                provident illo expedita quo
+                dignissimos tenetur veritatis,
+                quaerat ullam praesentium
+                impedit similique totam
+                harum nam possimus, incidunt
+                unde!
+            </div>
+            <div class="redes">
+                <h2>CONTACTO</h2>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</div>

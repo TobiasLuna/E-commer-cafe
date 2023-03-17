@@ -1,0 +1,74 @@
+.contenido
+{
+    margin:10px;
+    padding: 20px;
+    margin-top:20px;
+    width: 450px;
+}
+.titulo
+{
+    background: none;
+    text-align: center;
+    text-transform: uppercase;
+    color:rgb(41, 41, 41);
+
+}
+
+.contenedor .items
+{
+    gap:20px;
+    margin:15px;
+    justify-content: center;
+    color:rgb(41, 41, 41);
+}
+.contenedor .input-item
+{
+    display:flex;
+    flex-direction: row;
+    gap:2px;
+}
+.contenedor .input-item span
+{
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+    color: rgb(41, 41, 41);
+}
+.contenedor .input-item input
+{
+    width: 300px;
+}
+
+.contenedor .items label
+{
+    text-align: center;
+    text-transform: uppercase;
+}
+.contra
+{
+    display: flex;
+    flex-direction: column;
+}
+.contra a
+{
+    text-decoration: none;
+    color: #273746;
+}
+.btn-guardar
+{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+.btn-guardar button
+{
+    background: none;
+    border:1px solid #273746;
+    color:#273746;
+    text-transform: uppercase;
+}
+.btn-guardar button:hover{
+    background: #273746;
+    color:#fff;
+}
+

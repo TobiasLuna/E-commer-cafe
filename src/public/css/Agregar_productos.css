@@ -1,0 +1,65 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:20px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0,0,0.5);
+
+}
+.container h3
+{
+    color:rgb(45,45,45);
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+.items
+{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    color:rgb(45,45,45)
+}
+.items input
+{
+    border:none;
+    border-bottom: 1px solid #273746;
+}
+.items label{
+    text-transform: uppercase;
+}
+.grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px
+}
+.imagen-url
+{
+    display: flex;
+    justify-content: center;
+}
+.imagen-url img
+{
+    width: 200px;
+    height: 200px;
+}
+.btn-guardar
+{
+    display: flex;
+    align-content: center;
+    margin-top:30px;
+    margin-bottom: 30px;
+    width: 200px;
+}
+.btn-guardar button
+{
+    background: none;
+    border:1px solid #273746;
+    color:#273746;
+}
+.btn-guardar button:hover
+{
+    background-color: #273746;
+    color:#fff;
+}

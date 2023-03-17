@@ -1,0 +1,73 @@
+/*GRID*/
+.grid
+{
+    display: grid;
+    grid-template-areas: 'contenido'
+                          'footer';
+}
+/*FIN GRID*/
+/*CONTENIDO*/
+header
+{
+    grid-area: contenido;
+    display: grid;
+    justify-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+h3
+{
+    text-transform: uppercase;
+    font-size: 23px;
+    color: #515A5A;
+    margin:10px
+}
+.contenedor
+{
+    background: #fff;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    gap:20px;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    
+}
+.contenedor div
+{
+    display: flex;
+    flex-direction: column;
+    margin:20px;
+    text-align: center;
+}
+.contenedor div input
+{
+    width: 300px;
+    border:none;
+    border-bottom: 1px solid #273746;
+    color: #515A5A;
+    margin:10px
+}
+.contenedor div label
+{
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.btn-enviar
+{
+    background:none;
+    width: 300px;
+    align-items: center;
+    border: 1px solid #273746;
+    text-transform: uppercase;
+}
+.btn-enviar:hover
+{
+    background: #273746;
+    color:#fff;
+}
+/*FIN CONTENIDO*/
+

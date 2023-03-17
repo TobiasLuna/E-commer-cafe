@@ -1,0 +1,59 @@
+<div class="col md-3 mx-auto contenido">
+    <div class="card">
+        <div class="titulo">
+            <h3>Editar</h3>
+        </div>
+        <div class="card-body contenedor">
+            <form action="/usuarios/configuracion/edit/{{user.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+                
+                <div class="form-group items">
+                <label for="nombre"><b>nombre</b></label>
+                <div class="input-item">
+                    <span class="material-symbols-outlined">
+                     edit
+                    </span>
+                    <input type="text" name="nombre" class="form-control" value="{{user.nombre}}">
+                </div>
+                </div>
+                
+                <div class="form-group items">
+                <label for="apellido"><b>apellido</b></label>
+                <div class="input-item">
+                    <span class="material-symbols-outlined">
+                     edit
+                    </span>
+                    <input type="text" name="apellido" class="form-control" value="{{user.apellido}}">
+                </div>
+                </div>
+               
+                <div class="form-group items">
+                <label for="email"><b>email</b></label>
+                <div class="input-item">
+                    <span class="material-symbols-outlined">
+                    alternate_email
+                    </span>
+                    <input type="email" name="correo" class="form-control" value="{{user.correo}}">
+                </div>
+                </div>
+                
+                <div class="form-group items">
+                <label for="contra"><b>contraseña</b></label>
+                <div class="input-item">
+                    <span class="material-symbols-outlined">
+                    lock
+                    </span>
+                   <div class="contra">
+                     <input type="password" name="contra" class="form-control" value="******" disabled>
+                     <a href="">Modificar contraseña</a>
+                   </div>
+                </div>
+                </div>
+                <div class="form-group items btn-guardar">
+                    <button type="submit">GUARDAR</button>
+                    <a href="/usuario/configuracion"><button>CANCELAR</button></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

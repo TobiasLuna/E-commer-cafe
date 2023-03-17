@@ -1,0 +1,115 @@
+.grid
+{
+    display: grid;
+    grid-template-areas: 'imagen'
+                          'contenido'
+                           'footer';
+
+}
+header
+{
+    background-color: #FDF2E9;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.imagen
+{   
+    grid-area: imagen;
+    margin:20px;
+    padding:25px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 450px;
+    height: 300px;
+}
+.imagen img
+{
+    width: 300px;
+    height: 300px;
+}
+.contenido
+{
+    grid-area: contenido;
+    color:#17202A;
+}
+.precio
+{
+    font-size: 50px;
+    color:#17202A;   
+}
+.descripcion 
+{
+    font-size: 20px;
+    margin:20px
+}
+.descripcion button
+{
+    background: none;
+    border:none;
+}
+.descripcion-texto
+{
+    text-align: center;
+    width: 300px;
+    display: block;
+}
+.ocultar
+{
+    display: none;
+}
+.mostrar
+{
+    display: block;
+}
+.btn-comprar
+{
+    border:1px solid #17202A;
+    color: #17202A;
+    border-radius: 5%;
+    text-decoration: none;
+    font-size: 25px;
+}
+.btn-comprar:hover
+{
+    background-color: #17202A;
+    color:#fff;
+}
+
+.contenedor-compra{
+    position:absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    min-width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(79, 79, 79, 0.7);
+    z-index: 1;
+    visibility: hidden;
+
+}
+.mostrar-compra
+{
+    width: 450px;
+    height: auto;
+    padding: 10px;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mostrar-compra h3{
+    font-size:20px;
+    font-weight: 500;
+}
+.compra-cerrar
+{
+   text-align: left;
+   cursor: pointer;
+}

@@ -1,0 +1,47 @@
+   <div class="grid">
+        <header>
+            <div class="imagen">
+                <img src="/img/producto/{{producto.image}}" alt="No pudimos cargar la imagen...">
+            </div>
+            <div class="contenido">
+                <h3>{{producto.nombre}}</h3>
+                <p class="precio">${{producto.precio}}</p>
+                <div class="descripcion">
+                    <p>Descripcion: 
+                        <button class="btn-mostrar" id="mostrar-btn"><span class="material-symbols-outlined">
+                        expand_more
+                        </span></button>
+                    </p>
+                    <p class="descripcion-texto ocultar" id="mostrar">
+                        {{producto.descripcion}}
+                    </p>
+                </div>
+                <!--COMPRAR-->
+                <a href="/comprar/{{producto._id}}" class="btn-comprar" id="btn-compra">
+                    Comprar
+                </a>
+            </div>
+        </header>
+        <footer>
+            <div class="columnas-footer">
+                <div class="informacion">
+                    <h2>INFORMACION</h2>
+                    Lorem ipsum dolor sit amet 
+                    consectetur, adipisicing elit. 
+                    Repellat natus ex eveniet, 
+                    provident illo expedita quo 
+                    dignissimos tenetur veritatis,
+                    quaerat ullam praesentium 
+                    impedit similique totam 
+                    harum nam possimus, incidunt
+                    unde!
+                </div>
+                <div class="redes">
+                    <h2>CONTACTO</h2>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>

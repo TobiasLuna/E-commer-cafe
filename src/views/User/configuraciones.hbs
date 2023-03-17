@@ -1,0 +1,23 @@
+<div class="titulo">
+    <h1>CONFIGURACIONES</h1>
+</div>
+<div class="row">
+    {{#each usuarios}}
+        <div class="usuarios col-md-3">
+            <div class="card">
+                <div class="card-body usuarios-card">
+                    <h4 class="card-title d-flex justify-content-between aling-items-center">
+                        {{nombre}} {{apellido}}
+                        <a href="/usuarios/configuracion/editar/{{_id}}"><span class="material-symbols-outlined edit">edit</span></a>
+                    </h4>
+                    <p><b>CORREO: </b> {{correo}}</p>
+                    
+                    <form class="btn-borrar-usuario"action="/usuarios/configuracion/eliminar/{{_id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                      <button type="submit" class="btn"><span class="material-symbols-outlined borrar">delete</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>

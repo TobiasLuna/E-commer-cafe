@@ -1,0 +1,59 @@
+.grid
+{
+    display: grid;
+    grid-template-areas: 'contenido'
+                          'footer';
+    grid-column: auto auto;
+}
+header
+{
+    grid-area: contenido;
+    text-align: center;
+    background-color: #FDF2E9;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: grid;
+    justify-items: center;
+}
+.contenedor
+{
+    background:#fff;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    color: #515A5A;
+}
+.contenedor div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor div input
+{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #273746;
+    text-decoration: none;
+}
+
+.contenedor div label
+{
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.contenedor div textarea
+{
+    background: none;
+    border:1px solid #273746
+}
+.btn-enviar input
+{
+    border: 1px solid #273746;
+    text-transform: uppercase;
+}
+

@@ -1,0 +1,53 @@
+    <div class="grid">
+        <!--Contenido-->
+        <header>
+            <h3>Registro</h3>
+            <form action="/usuario/add" method="POST" class="contenedor">
+                <div class="nombre">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" value="{{nombre}}">
+
+                    <label for="aplellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" value="{{apellido}}">
+                </div>
+                <div class="correo">
+                    <label for="correo">Correo</label>
+                    <input type="email" name="correo" id="correo" value="{{correo}}">
+
+                    <label for="r_correo">Repetir correo</label>
+                    <input type="email" name="r_correo" id="r_correo" value="{{r_correo}}">
+                </div>
+                <div class="contra">
+                    <label for="contra">Contraseña</label>
+                    <input type="password" name="contra" id="contra" value="{{contra}}">
+
+                    <label for="r_contra">Repetir constraseña</label>
+                    <input type="password" name="r_contra" id="r_contra" value="{{r_contra}}">
+                </div>
+                <input class="btn-enviar" name="btn-enviar" type="submit" value="Enviar">
+            </form>
+        </header>
+        <!--Fin de contenido-->
+        <footer>
+            <div class="columnas-footer">
+                <div class="informacion">
+                    <h2>INFORMACION</h2>
+                    Lorem ipsum dolor sit amet 
+                    consectetur, adipisicing elit. 
+                    Repellat natus ex eveniet, 
+                    provident illo expedita quo 
+                    dignissimos tenetur veritatis,
+                    quaerat ullam praesentium 
+                    impedit similique totam 
+                    harum nam possimus, incidunt
+                    unde!
+                </div>
+                <div class="redes">
+                    <h2>CONTACTO</h2>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
