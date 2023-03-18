@@ -9,7 +9,7 @@ header
 {
     grid-area: contenido;
     text-align: center;
-    background-color: #FDF2E9;
+    background-color: #fff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: grid;
     justify-items: center;
