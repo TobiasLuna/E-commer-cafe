@@ -64,7 +64,7 @@ section[id]
 @media screen and (max-width:1000px) {
     .sidebar 
     {
-        width: 60px;
+        width: 40px;
     }
     .sidebar .menu a p
     {
@@ -90,17 +90,16 @@ header{
     display: flex;
 
     width: auto;
-    height:250px;
-    background-color: #fff;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+   
 }
 .tarjeta
 {
-    width: 500px;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+   height: 300px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap:100px;
 }
 
 .tarjeta .texto h4
@@ -113,12 +112,12 @@ header{
 {
     margin:10px;
     text-align: center;
+    width: 120px;
     color:rgb(41, 41, 41);
 }
 
 .tarjeta .texto p
 {
-    width: 200px;
     text-align: left;
 }
 
