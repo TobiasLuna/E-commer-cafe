@@ -34,12 +34,12 @@ header
     grid-template-areas: 'texto texto'
                           'boton boton';
     justify-content: center;
-    margin-left: 80px;
-    padding: 150px;
+    text-align: center;
 }
 .text-nosotros
 {
     grid-area: texto;
+    margin-top: 400px;
 }
 .btn-nosotros
 {   
@@ -74,9 +74,9 @@ header
 }
 .tarjetas
 {
-    display: grid;
-    width: auto;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap:10px;
     margin:10px;
     color: #222222;
@@ -148,10 +148,11 @@ header
 }
 .productos
 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 10px;
-    margin-left: 60px;
+    display: flex;
+    flex-direction: row;
+    gap:50px;
+    flex-wrap: wrap;
+    align-content: center;
     pointer-events: all;
 }
 
