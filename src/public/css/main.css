@@ -42,12 +42,16 @@ body
     {
         display: none;
         visibility: hidden;
+
     }
 }
+
 @media screen and (max-width:1000px) {
     .usuario{
         display: none;
         visibility: hidden;
+        width: 100%;
+
     }
     .navbar-nav a
     {
@@ -64,8 +68,9 @@ footer
 }
 .columnas-footer
 {
-    display: grid;
-    grid-template-columns:1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 20px;
     margin:20px
 }
@@ -78,12 +83,13 @@ footer
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size:15px;
     text-align: left;
+    
 }
 
 .redes
 {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap:10px;
     justify-content: center;
     text-decoration: none;
